@@ -4,7 +4,7 @@ organization := "arimitsu.sf"
 
 name := "circleci-test"
 
-version := "0.0.1-001"
+version := "0.0.1-002"
 
 scalaVersion := "2.11.2"
 
