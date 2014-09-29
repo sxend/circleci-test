@@ -7,7 +7,7 @@ machine:
   java:
     version: oraclejdk7
   pre:
-  	- envsubst < .credentials > ~/.bintray/.credentials
+    - envsubst < .credentials > ~/.bintray/.credentials
 deployment:
   release:
     branch: master
