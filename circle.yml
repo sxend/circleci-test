@@ -4,6 +4,7 @@ dependencies:
     - ~/.ivy2
     - ~/.m2
   pre:
+    - mkdir -p ~/.bintray
     - envsubst < .credentials > ~/.bintray/.credentials
 machine:
   java:
