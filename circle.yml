@@ -3,11 +3,11 @@ dependencies:
     - ~/.sbt
     - ~/.ivy2
     - ~/.m2
+  pre:
+    - envsubst < .credentials > ~/.bintray/.credentials
 machine:
   java:
     version: oraclejdk7
-  pre:
-    - envsubst < .credentials > ~/.bintray/.credentials
 deployment:
   release:
     branch: master
