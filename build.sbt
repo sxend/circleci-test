@@ -4,7 +4,7 @@ organization := "arimitsu.sf"
 
 name := "circleci-test"
 
-version := "0.0.2-001"
+version := "0.0.2-002"
 
 scalaVersion := "2.11.2"
 
@@ -14,7 +14,7 @@ crossScalaVersions := Seq("2.10.4", "2.11.2")
 
 publishMavenStyle := true
 
-seq(bintraySettings:_*)
+Seq(bintraySettings:_*)
 
 repository in bintray := {
   if (version.value.matches("^[0-9]\\.[0-9]*\\.[0-9]*$")) "releases" else "snapshots"
