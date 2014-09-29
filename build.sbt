@@ -4,7 +4,7 @@ organization := "arimitsu.sf"
 
 name := "circleci-test"
 
-version := "0.0.1"
+version := "0.0.2-001"
 
 scalaVersion := "2.11.2"
 
@@ -16,12 +16,9 @@ publishMavenStyle := true
 
 seq(bintraySettings:_*)
 
-repository in bintray := ({
-	version.value.toString.matches("^[0-9]\\.[0-9]*\\.[0-9]*$") match {
-		case true => "releases"
-		case _ => "snapshots"
-	}
-})
+repository in bintray := {
+  if (version.value.matches("^[0-9]\\.[0-9]*\\.[0-9]*$")) "releases" else "snapshots"
+}
 
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 
