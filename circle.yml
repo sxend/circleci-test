@@ -1,0 +1,15 @@
+dependencies:
+  cache_directories:
+    - ~/.sbt
+    - ~/.ivy2
+    - ~/.m2
+  pre:
+    - mkdir -p ~/.bintray
+machine:
+  java:
+    version: oraclejdk8
+deployment:
+  release:
+    branch: master
+    commands:
+      - sbt clean +compile +package
