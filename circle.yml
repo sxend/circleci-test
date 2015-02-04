@@ -11,7 +11,8 @@ machine:
 deployment:
   tag_release:
     branch: /tag-.+/
-    commands: echo foo
+    commands: 
+      - echo foo
   release:
     branch: master
     commands:
