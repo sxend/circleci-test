@@ -10,7 +10,7 @@ machine:
     version: oraclejdk8
 deployment:
   tag-release:
-    tag: /tag-.+/
+    branch: /tag-.+/
     commands: echo foo
   release:
     branch: master
